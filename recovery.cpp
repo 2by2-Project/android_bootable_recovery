@@ -867,8 +867,8 @@ Device::BuiltinAction start_recovery(Device* device, const std::vector<std::stri
   std::string ver_date = ver_date_match.str(1);  // Empty if no match.
 
   std::vector<std::string> title_lines = {
-    "Version " + android::base::GetProperty("ro.lineage.build.version", "(unknown)") +
-        " (" + ver_date + ")",
+    "2by2 ROM Version: " + android::base::GetProperty("ro.2by2.build.version", "unknown") +
+        " | " + android::base::GetProperty("ro.2by2.build.version.codename", "unknown"),
   };
   title_lines.push_back("Product name - " + android::base::GetProperty("ro.product.device", ""));
   if (android::base::GetBoolProperty("ro.build.ab_update", false)) {
